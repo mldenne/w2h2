@@ -1,3 +1,5 @@
+
+require 'erb'
 # Homework 2: Array Play
 
 # Short first names in our class
@@ -70,3 +72,7 @@ puts cheap_movies
 leo_movies = movies.select { |star| star[:stars].include? "Leonardo DiCaprio"}
 
 puts leo_movies
+
+new_file = File.open("./index.html", "w+")
+new_file << ERB.new(File.read("index.html.erb")).result(binding)
+new_file.close

@@ -69,7 +69,7 @@ puts cheap_movies
 
 # Create an array of movies that starred Leonardo DiCaprio
 
-leo_movies = movies.select { |star| star[:stars].include? "Leonardo DiCaprio"}
+leo_movies = movies.select { |star| star[:stars].include? "Leonardo DiCaprio" }
 
 puts leo_movies
 
